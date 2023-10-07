@@ -47,7 +47,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
-
+  color: black;
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -75,16 +75,30 @@ const Desc = styled.p`
     text-align: center;
   }
 `;
+const Desc2 = styled.p`
+  font-size: 24px;
+  color: lightgray;
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    text-align: center;
+  }
+`;
 
 const Button = styled.button`
   background-color: #4e6fda;
   color: white;
   font-weight: 500;
   width: 100px;
-  padding: 10px;
+  height: 1.9rem;
+  padding: 0.4rem;
+  margin: 0.3rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+`;
+
+const section_social = styled.button`
+  margin: 80px;
 `;
 
 const Right = styled.div`
@@ -96,21 +110,26 @@ const Right = styled.div`
   }
 `;
 
+const Logo = styled.img`
+  height: 1rem;
+  margin-right: 4px;
+`;
 const Img = styled.img`
-  width: 800px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   object-fit: contain;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  border-radius: 50%;
   margin: auto;
   animation: animate 2s infinite ease alternate;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 
   @keyframes animate {
@@ -126,33 +145,63 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Front-End React Developer</Title>
           <WhatWeDo>
-            <Line src='./img/line.png' />
-            <Subtitle>What we Do</Subtitle>
+            <Line src='/img/line.png' />
+            <Subtitle>Hi, I'm David Patrik.</Subtitle>
           </WhatWeDo>
-          <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
-          </Desc>
-          <Button>Learn More</Button>
+          <Desc>A passionate SE Developer based in Lisbon, Portugal.📍</Desc>
+          <section_social>
+            <a href='https://github.com/davecarrijo' target='_blank'>
+              <Button>
+                <Logo src='/img/github-logo.png'></Logo>
+                Github
+              </Button>
+            </a>
+            <a href='https://github.com/davecarrijo' target='_blank'>
+              <Button>
+                <Logo src='/img/github-logo.png'></Logo>
+                Leetc
+              </Button>
+            </a>
+            <a href='https://www.linkedin.com/in/davidcarrijo/' target='_blank'>
+              <Button>
+                <Logo src='/img/linkdin_logo.png'></Logo>
+                Linkdln
+              </Button>
+            </a>
+            <a
+              href='https://drive.google.com/file/d/1envhtsJNZ1HDQIM1jsZPYDEZNHvo4L3J/view'
+              target='_blank'
+            >
+              <Button>
+                <Logo src='/img/LogoDave.png'></Logo>
+                RC
+              </Button>
+            </a>
+
+            {/* <a href='https://davecarrijo.github.io/' target='_blank'>
+              <Button>IOS-Repo</Button>
+            </a> */}
+          </section_social>
         </Left>
         <Right>
           <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
-              <ambientLight intensity={1} />
+              <ambientLight intensity={3} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={2.4}>
+              <Sphere args={[1, 100, 200]} scale={1.9}>
                 <MeshDistortMaterial
                   color='#4e6fda'
                   attach='material'
-                  distort={0.8}
-                  speed={0.4}
+                  distort={0.7}
+                  speed={0.3}
                 />
               </Sphere>
             </Suspense>
           </Canvas>
-          <Img src='./img/moon.png' />
+          <Img src='/img/me.jpg' />
         </Right>
       </Container>
     </Section>

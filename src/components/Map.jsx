@@ -22,7 +22,7 @@ const Map = () => {
         geography='/features.json'
         fill='#4c85ba'
         stroke='#FFFFFF'
-        strokeWidth={0.5}
+        strokeWidth={3}
       >
         {({ geographies }) =>
           geographies.map((geo) => (
@@ -31,31 +31,17 @@ const Map = () => {
         }
       </Geographies>
       <Annotation
-        subject={[2.3522, 48.8566]}
-        dx={-90}
+        subject={[-9.3522, 38.8566]}
+        dx={+90}
         dy={-30}
         connectorProps={{
-          stroke: "white",
-          strokeWidth: 2,
+          stroke: "lightblue",
+          strokeWidth: 5,
           strokeLinecap: "round"
         }}
       >
-        <text x='-8' textAnchor='end' alignmentBaseline='middle' fill='white'>
-          {"Paris"}
-        </text>
-      </Annotation>
-      <Annotation
-        subject={[21.01178, 52.22977]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "white",
-          strokeWidth: 2,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x='-8' textAnchor='end' alignmentBaseline='middle' fill='white'>
-          {"Warsaw"}
+        <text x='+70' textAnchor='end' alignmentBaseline='middle' fill='white'>
+          {"Lisbon"}
         </text>
       </Annotation>
     </ComposableMap>

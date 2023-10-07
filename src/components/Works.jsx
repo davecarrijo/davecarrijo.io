@@ -9,7 +9,7 @@ const data = [
   "Development",
   "Illustration",
   "Product Design",
-  "Social Media",
+  "Social Media"
 ];
 
 const Section = styled.div`
@@ -30,6 +30,7 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+
     flex-direction: column;
   }
 `;
@@ -41,6 +42,7 @@ const Left = styled.div`
 
   @media only screen and (max-width: 768px) {
     padding: 20px;
+    color: black;
     justify-content: center;
   }
 `;
@@ -56,13 +58,13 @@ const ListItem = styled.li`
   font-size: 90px;
   font-weight: bold;
   cursor: pointer;
-  color: transparent;
+  color: black;
   -webkit-text-stroke: 1px white;
   position: relative;
 
   @media only screen and (max-width: 768px) {
     font-size: 24px;
-    color: white;
+    color: black;
     -webkit-text-stroke: 0px;
   }
 
@@ -71,7 +73,7 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    color: pink;
+    color: #4e6fda;
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
