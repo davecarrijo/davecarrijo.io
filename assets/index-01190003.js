@@ -66,6 +66,7 @@ Error generating stack: `+s.message+`
   }
 `,NU=Et.h1`
   font-weight: 200;
+  color: black;
 `,OU=Et.form`
   width: 500px;
   display: flex;
@@ -86,7 +87,7 @@ Error generating stack: `+s.message+`
   border-radius: 5px;
   background-color: #e8e6e6;
 `,GU=Et.button`
-  background-color: #4e6fda;#4e6fda
+  background-color: #4e6fda;
   color: white;
   border: none;
   font-weight: bold;
@@ -99,7 +100,7 @@ Error generating stack: `+s.message+`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-`,VU=()=>{const t=O.useRef(),[e,n]=O.useState(null);return Le(FU,{children:Ot(UU,{children:[Le(kU,{children:Ot(OU,{ref:t,onSubmit:i=>{i.preventDefault(),wF.sendForm("service_id","template_id",t.current,"public_key").then(s=>{console.log(s.text),n(!0)},s=>{console.log(s.text),n(!1)})},children:[Le(NU,{children:"Contact Us"}),Le(cw,{placeholder:"Name",name:"name"}),Le(cw,{placeholder:"Email",name:"email"}),Le(zU,{placeholder:"Write your message",name:"message",rows:10}),Le(GU,{type:"submit",children:"Send"}),e&&"Your message has been sent. We'll get back to you soon :)"]})}),Le(HU,{children:Le(LU,{})})]})})},WU=Et.div`
+`,VU=()=>{const t=O.useRef(),[e,n]=O.useState(null);return Le(FU,{children:Ot(UU,{children:[Le(kU,{children:Ot(OU,{ref:t,onSubmit:i=>{i.preventDefault(),wF.sendForm("service_id","template_id",t.current,"public_key").then(s=>{console.log(s.text),n(!0)},s=>{console.log(s.text),n(!1)})},children:[Le(NU,{children:"Contact Me"}),Le(cw,{placeholder:"Name",name:"name"}),Le(cw,{placeholder:"Email",name:"email"}),Le(zU,{placeholder:"Write your message",name:"message",rows:10}),Le(GU,{type:"submit",children:"Send"}),e&&"Your message has been sent. We'll get back to you soon :)"]})}),Le(HU,{children:Le(LU,{})})]})})},WU=Et.div`
   display: flex;
   justify-content: center;
 
